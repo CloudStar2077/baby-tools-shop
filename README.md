@@ -80,7 +80,10 @@ docker run -d -p 8025:8025 -v /host/data:/app/data \     # "-d" for detatch mode
   ```
 
 
-
+Visit the baby-tools-shop in a web-browser
+```bash
+<HostIp>:<HostPort>
+ ```
 
 
 
