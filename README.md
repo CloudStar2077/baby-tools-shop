@@ -1,4 +1,4 @@
-# Docker Container Setup
+# Docker Container Setup for an E-Commerce Web-App
 
 Setup a docker container to run a Django Web App, this will be implementet by generating a predefined docker image.
 
