@@ -50,6 +50,7 @@ doing any configurations.
 ## 3. Usage
 
 To Start building the Repository, clone the Python App from Github, it is the basis of the project.
+
 ```git clone git@github.com:Developer-Akademie-DevSecOpsKurs/baby-tools-shop.git```
 You can run the app localy by 
 ```bash
