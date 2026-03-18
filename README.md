@@ -59,7 +59,8 @@ doing any configurations. This begins with the first line in the Dockerfile whic
 
 Because unnecessary files in the container would consume resources they should be ignored in the container build by setting up the `.dockerignore` file. This includes the Dockerfile, Git, temporary files, logs, environment variables etc.
 
-For a simular purpose create the `.gitignore`. This contains
+For a simular purpose create the `.gitignore`. This contains everything to ignore uploading into the repository. Basicly files which are automatically generated, local (database, settings), secret or doesn't belong in the repository.
+
 
 
 
