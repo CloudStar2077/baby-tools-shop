@@ -5,8 +5,7 @@ Setup a docker container to run a Django Web App, this will be implementet by ge
 # Table of Contents
 
 1. [Quickstart](#Quickstart) 
-2. [Creating the Repository](#Creating-the-Repository)
-3. [Usage](#Usage)
+2. [Usage](#Usage)
 
 ## 1. Quickstart
 
@@ -37,17 +36,7 @@ docker run -d \
   bts-app:latest
 ```
 
-
-## 2. Creating the Repository
-
-To ensure that all data and dependencies can be transfered into the container, copy all the necessary files into a project directory `baby-tools-shop`. 
-
-`babyshop_app` is the directory which includes the Django Web App. To ensure the app runs correctly, the dependencies are listed in the `requirements.txt`.
-The `.gitignore` ignores irrelevant content from the repository, as well as the `.dockerignore` which ignores unnecesarry files to load into the Container.
-The `Dockerfile` describes the predefined docker image like a building plan for the container to start it within seconds without
-doing any configurations.
-
-## 3. Usage
+## 2. Usage
 
 To Start building the Repository, clone the Python App from Github, this is the core of the project.
 
@@ -66,7 +55,7 @@ python manage.py migrate  #migration of the database
 pip freeze -> requirements.txt #prints the output of all dependencies directly into the requirements.txt
 ```
 The `Dockerfile` describes the predefined docker image like a building plan for the container to start it within seconds without
-doing any configurations. This begins with the first line in the Dockerfile which pulls the base image for the Container, a lighweight linux operating system and python3. 
+doing any configurations. This begins with the first line in the Dockerfile which pulls the base image for the Container, a lighweight linux operating system and python3. Then set the working directory to copy it into the container
 
 
 
