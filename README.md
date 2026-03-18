@@ -64,10 +64,20 @@ For a simular purpose create the `.gitignore`. This contains everything to ignor
 Its time to build the image by typing 
 ```bash
 cd /baby-tools-shop
-docker build -t bts-app -f Dockerfile .  # -t for tag the image with a name
-                                         # -f input file
+docker build -t bts-app -f Dockerfile .  # "-t" for tag the image with a name
+                                         # "-f" input file
  ```
+This should finish without any errors ...
 
+Then start the Container
+```bash
+docker run -d -p 8025:8025 -v /host/data:/app/data \     # "-d" for detatch mode to run container in background
+--name bts-app --restart unless-stopped bts-app:latest   # "-p" for port mapping <HostPort>:<ContainerPort>
+                                                         # "-v" for volume mapping <HostPath>:<ContainerPath>
+                                                         # "--name" for naming the container
+                                                         # "--restart unless-stopped" for restarting the container after
+                                                         # an error or crash
+  ```
 
 
 
