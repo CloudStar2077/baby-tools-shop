@@ -55,7 +55,7 @@ You can run the app localy by
 cd babyshop_app
 python manage.py runserver
 ```
-Now you can see that some dependencies (packages) need to be installed and the sql database also must be migrated.
+Now you can see that some dependencies (packages) need to be installed and the sql database must be migrated.
 
 To ensure that all data and dependencies can be transfered into the container, copy the `babyshop_app` into the project directory `baby-tools-shop`. To make the environment reproducible, the dependencies are listed in the `requirements.txt`.
 With 
