@@ -49,6 +49,22 @@ doing any configurations.
 
 ## 3. Usage
 
+To Start building the Repository, first clone the Python App from ```git@github.com:Developer-Akademie-DevSecOpsKurs/baby-tools-shop.git```, this is the basis of the project.
+You can run the app localy by 
+```bash
+cd babyshop_app
+python manage.py runserver
+```
+Now you can see that some dependencies (packages) need to be installed and the sql database also must be migrated.
+
+To ensure that all data and dependencies can be transfered into the container, copy the `babyshop_app` into the project directory `baby-tools-shop`. To make the environment reproducible, the dependencies are listed in the `requirements.txt`.
+With 
+```bash
+pip freeze -> requirements.txt
+```
+you can print the output directly into the requirements.txt. 
+
+
 
 
 
