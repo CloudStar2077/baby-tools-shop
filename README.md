@@ -57,7 +57,7 @@ Start the app by
 cd babyshop_app
 python manage.py runserver
 ```
-You can see that some dependencies (packages) need to be installed and the sql database needs to be migrated. Install the packages and then 
+You can see that some dependencies (packages) need to be installed and the SQL database needs to be migrated. Install the packages and then run the migrations.
 ```bash
 python manage.py migrate  #migration of the database
 
