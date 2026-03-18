@@ -20,21 +20,21 @@ QUICK START GUIDE
 
 - Clone Repository
 ```bash
-git clone https://github.com/username/repo.git
-cd /repo
+git clone git@github.com:CloudStar2077/baby-tools-shop.git
+cd /baby-tools-shop
 ```
 - Build docker image
 ```bash
-docker build -t my-webapp:latest .
+docker build -t bts-app:latest .
 ```  
 - Run the Container
 ```bash
 docker run -d \
   -p 8025:80 \
   -v /host/data:/app/data \
-  --name my-webapp \
+  --name bts-app \
   --restart unless-stopped \
-  my-webapp:latest
+  bts-app:latest
 ```
 
 
@@ -55,14 +55,14 @@ You can run the app localy by
 cd babyshop_app
 python manage.py runserver
 ```
-Now you can see that some dependencies (packages) need to be installed and the sql database must be migrated.
-
-To ensure that all data and dependencies can be transfered into the container, copy the `babyshop_app` into the project directory `baby-tools-shop`. To make the environment reproducible, the dependencies are listed in the `requirements.txt`.
-With 
+Now you can see that some dependencies (packages) need to be installed and the sql database must be migrated. Install the packages and then 
 ```bash
-pip freeze -> requirements.txt
+python manage.py migrate  #migration of the database
+
+pip freeze -> requirements.txt #prints the output of all dependencies directly into the requirements.txt.
 ```
-you can print the output directly into the requirements.txt. 
+To make the environment reproducible, the dependencies are listed in the `requirements.txt`.
+
 
 
 
