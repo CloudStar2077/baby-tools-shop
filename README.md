@@ -59,6 +59,8 @@ python manage.py runserver
 ```
 You can see that some dependencies (packages) need to be installed and the SQL database needs to be migrated. Install the packages and then run the migrations.
 ```bash
+pip install django && pip install pillow
+
 python manage.py migrate  #migration of the database
 
 pip freeze -> requirements.txt #prints the output of all dependencies directly into the requirements.txt
