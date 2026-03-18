@@ -29,7 +29,7 @@ docker build -t bts-app:latest
 - Run the Container
 ```bash
 docker run -d \
-  -p 8025:80 \
+  -p 8025:8025 \
   -v /host/data:/app/data \
   --name Baby-Tools-Shop \
   --restart unless-stopped \
