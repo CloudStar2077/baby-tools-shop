@@ -4,7 +4,7 @@ FROM python:3.12-slim
 # Define Variable
 ARG WORKDIR=/app
 
-# Arbeitsverzeichnis
+# Working Directory
 WORKDIR $WORKDIR
 
 # Copy relevant Files from Host during build process
