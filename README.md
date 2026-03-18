@@ -24,7 +24,7 @@ cd /baby-tools-shop
 ```
 - Build docker image
 ```bash
-docker build -t bts-app:latest .
+docker build -t bts-app:latest 
 ```  
 - Run the Container
 ```bash
