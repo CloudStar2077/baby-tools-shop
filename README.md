@@ -65,9 +65,9 @@ python manage.py migrate  #migration of the database
 
 pip freeze -> requirements.txt #prints the output of all dependencies directly into the requirements.txt
 ```
-To make the environment reproducible, the dependencies are listed in the `requirements.txt`.
 The `Dockerfile` describes the predefined docker image like a building plan for the container to start it within seconds without
-doing any configurations. This begins with the first line in the Dockerfile which pulls the base image for the Container
+doing any configurations. This begins with the first line in the Dockerfile which pulls the base image for the Container, a lighweight linux operating system and python3. 
+
 
 
 
