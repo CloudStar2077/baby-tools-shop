@@ -61,7 +61,17 @@ Because unnecessary files in the container would consume resources they should b
 
 For a simular purpose create the `.gitignore`. This contains everything to ignore uploading into the repository. Basicly files which are automatically generated, local (database, settings), secret or doesn't belong in the repository.
 
+The Repository should now have a structure like this:
 
+BABY-TOOLS-SHOP/
+│
+├── babyshop_app/             # Main application (app source code)
+│
+├── .dockerignore             # Files ignored by Docker
+├── .gitignore                # Files ignored by Git
+├── Dockerfile                # Instructions to build the Docker image
+├── README.md                 # Project description & usage guide
+└── requirements.txt          # Python dependencies
 
 
 
