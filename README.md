@@ -32,7 +32,7 @@ docker build -t bts-app:latest .
 docker run -d \
   -p 8025:80 \
   -v /host/data:/app/data \
-  --name bts-app \
+  --name Baby-Tools-Shop \
   --restart unless-stopped \
   bts-app:latest
 ```
