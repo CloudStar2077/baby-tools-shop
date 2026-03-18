@@ -57,7 +57,7 @@ Start the app by
 cd babyshop_app
 python manage.py runserver
 ```
-You can see that some dependencies (packages) need to be installed and the SQL database needs to be migrated. Install the packages and then run the migrations.
+You can see that some dependencies (packages) need to be installed and the SQL database needs to be migrated. Install the packages and then run the migrations. To make the environment reproducible, the dependencies are listed in the `requirements.txt`.
 ```bash
 pip install django && pip install pillow
 
@@ -67,7 +67,7 @@ pip freeze -> requirements.txt #prints the output of all dependencies directly i
 ```
 To make the environment reproducible, the dependencies are listed in the `requirements.txt`.
 The `Dockerfile` describes the predefined docker image like a building plan for the container to start it within seconds without
-doing any configurations.
+doing any configurations. This begins with the first line in the Dockerfile which pulls the base image for the Container
 
 
 
