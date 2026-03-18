@@ -49,13 +49,14 @@ doing any configurations.
 
 ## 3. Usage
 
-To Start building the Repository, first clone the Python App from ```git@github.com:Developer-Akademie-DevSecOpsKurs/baby-tools-shop.git```, this is the basis of the project.
+To Start building the Repository, clone the Python App from Github, it is the basis of the project.
+```git clone git@github.com:Developer-Akademie-DevSecOpsKurs/baby-tools-shop.git```
 You can run the app localy by 
 ```bash
 cd babyshop_app
 python manage.py runserver
 ```
-Now you can see that some dependencies (packages) need to be installed and the sql database must be migrated. Install the packages and then 
+You can see that some dependencies (packages) need to be installed and the sql database must be migrated. Install the packages and then 
 ```bash
 python manage.py migrate  #migration of the database
 
