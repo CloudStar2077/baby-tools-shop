@@ -52,16 +52,16 @@ doing any configurations.
 To Start building the Repository, clone the Python App from Github, this is the core of the project.
 
 ```git clone git@github.com:Developer-Akademie-DevSecOpsKurs/baby-tools-shop.git```
-You can run the app localy by 
+Start the app by 
 ```bash
 cd babyshop_app
 python manage.py runserver
 ```
-You can see that some dependencies (packages) need to be installed and the sql database must be migrated. Install the packages and then 
+You can see that some dependencies (packages) need to be installed and the sql database needs to be migrated. Install the packages and then 
 ```bash
 python manage.py migrate  #migration of the database
 
-pip freeze -> requirements.txt #prints the output of all dependencies directly into the requirements.txt.
+pip freeze -> requirements.txt #prints the output of all dependencies directly into the requirements.txt
 ```
 To make the environment reproducible, the dependencies are listed in the `requirements.txt`.
 The `Dockerfile` describes the predefined docker image like a building plan for the container to start it within seconds without
