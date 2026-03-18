@@ -55,7 +55,14 @@ python manage.py migrate  #migration of the database
 pip freeze -> requirements.txt #prints the output of all dependencies directly into the requirements.txt
 ```
 The `Dockerfile` describes the predefined docker image like a building plan for the container to start it within seconds without
-doing any configurations. This begins with the first line in the Dockerfile which pulls the base image for the Container, a lighweight linux operating system and python3. Then set the working directory to copy it into the container. After the container is up running it will execute some commands for installing the requirements, open port 8025 and start a shell in the working directory to run the app.
+doing any configurations. This begins with the first line in the Dockerfile which pulls the base image for the Container, a lighweight linux operating system including python3. Then set the working directory to copy it into the container. After the container is up running it will execute some commands for installing the requirements, open port 8025 and start a shell in the working directory to run the app.
+
+Because unnecessary files in the container would consume resources they should be ignored in the container build by setting up the `.dockerignore` file. This includes the Dockerfile, Git, temporary files, logs, environment variables etc.
+
+
+
+
+
 
 
 
