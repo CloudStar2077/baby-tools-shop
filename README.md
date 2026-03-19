@@ -84,10 +84,14 @@ Visit the baby-tools-shop in a web-browser
 ```bash
 <HostIp>:<HostPort>
  ```
+You will see an empty Website without any products.
+```bash
+cd babyshop_app
+python manage.py createsuperuser
+ ```
+Create a admin user & password then login to the website `<hostip>:<hostport>/admin` to add your products.
 
-
-
-
+<img width="1721" height="581" alt="1" src="https://github.com/user-attachments/assets/86354315-0de9-4fae-9d8a-bf7f91d74521" />
 
 
 
