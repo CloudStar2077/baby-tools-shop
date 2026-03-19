@@ -14,6 +14,7 @@ PREREQUISITES
 - Basic knowledge of the terminal/CLI
 - Docker (version 20.10 or higher) installed
 - Git installed
+- VENV
 
 QUICK START GUIDE
 
