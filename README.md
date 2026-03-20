@@ -29,10 +29,11 @@ docker build -t bts-app -f Dockerfile .
 ```  
 - Run the Container
 ```bash
-docker run -d \
+docker run -d \     
   -p 8025:8025 \
-  -v /host/data:/app/data \
-  --name Baby-Tools-Shop \
+  -v /home/docker_volume_maps/data:/app/babyshop_app/data \
+  -v /home/docker_volume_maps/media:/app/babyshop_app/media \
+  --name bts-app \
   --restart unless-stopped \
   bts-app:latest
 ```
