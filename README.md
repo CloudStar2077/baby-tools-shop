@@ -54,7 +54,20 @@ pip install django && pip install pillow
 python manage.py migrate  #migration of the database
 
 pip freeze -> requirements.txt #prints the output of all dependencies into the requirements.txt
-```
+  ```
+
+In order for the app to know where to store and load the database, changes must be made to the settings.py
+```bash
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'data', 'db.sqlite3'),  
+    }
+}
+   ```
+
 The `Dockerfile` describes the predefined docker image like a building plan for the container to start it within seconds without
 doing any configurations. This begins with the first line in the Dockerfile which pulls the base image for the Container, a lighweight linux operating system including python3. Then set the working directory to copy it into the container. After the container is up running it will execute some commands for installing the requirements, open port 8025 and start a shell in the working directory to run the app.
 
@@ -72,15 +85,15 @@ This should finish without any errors ...
 
 Then start the Container
 ```bash
-docker run -d -p 8025:8025 -v /host/data:/app/data \     # "-d" for detatch mode to run container in background
---name bts-app --restart unless-stopped bts-app:latest   # "-p" for port mapping <HostPort>:<ContainerPort>
-                                                         # "-v" for volume mapping <HostPath>:<ContainerPath>
-                                                         # "--name" for naming the container
-                                                         # "--restart unless-stopped" for restarting the container after
-                                                         # an error or crash
-  ```
-
-
+docker run -d \                                                                 # "-d" for detatch mode to run container in background
+  -p 8025:8025 \                                                                # "-p" for port mapping <HostPort>:<ContainerPort>
+  -v /home/docker_volume_maps/data:/app/babyshop_app/data \                     # "-v" for volume mapping <HostPath>:<ContainerPath>
+  -v /home/docker_volume_maps/media:/app/babyshop_app/media \                   # "--name" for naming the container
+  --name bts-app \
+  --restart unless-stopped \                                                    # "--restart unless-stopped" for restarting the container after
+  bts-app:latest                                                                # an error or crash
+   ```
+ 
 Visit the baby-tools-shop in a web-browser
 ```bash
 <HostIp>:<HostPort>
@@ -93,6 +106,8 @@ python manage.py createsuperuser
 Create a admin user & password then login to the website `<hostip>:<hostport>/admin` to add your products.
 
 <img width="1721" height="581" alt="1" src="https://github.com/user-attachments/assets/86354315-0de9-4fae-9d8a-bf7f91d74521" />
+
+
 
 
 
