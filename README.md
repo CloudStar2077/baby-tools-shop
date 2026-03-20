@@ -57,7 +57,7 @@ python manage.py migrate  #migration of the database
 pip freeze -> requirements.txt #prints the output of all dependencies into the requirements.txt
   ```
 
-In order for the app to know where to store and load the database, changes must be made to the settings.py
+In order for the app to know where to store and load the database, changes must be made to the `settings.py`
 ```bash
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
