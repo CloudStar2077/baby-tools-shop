@@ -45,7 +45,7 @@ To Start building the Repository, clone the Python App from Github, this is the 
 ```git clone git@github.com:Developer-Akademie-DevSecOpsKurs/baby-tools-shop.git```
 Start the app by 
 ```bash
-cd baby-tools-shop && cd babyshop_app
+cd baby-tools-shop/babyshop_app
 python manage.py runserver
 ```
 You can see that some dependencies (packages) need to be installed and the SQL database needs to be migrated. Install the packages and then run the migrations. To make the environment reproducible, the dependencies are listed in the `requirements.txt`.
