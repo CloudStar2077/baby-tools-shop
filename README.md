@@ -84,6 +84,9 @@ Because unnecessary files in the container would consume resources they should b
 
 For a simular purpose create the `.gitignore`. This contains everything to ignore uploading into the Git repository. Basicly files which are automatically generated, local (database, settings), secret or doesn't belong in the repository.
 
+In `èxamples.env` are the placeholders for the envoirement variables.  
+
+
 Build the image by typing 
 ```bash
 cd /baby-tools-shop
