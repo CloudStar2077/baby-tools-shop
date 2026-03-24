@@ -65,8 +65,21 @@ python manage.py migrate  #migration of the database
 pip freeze -> requirements.txt #prints the output of all dependencies into the requirements.txt
   ```
 
-In order for the app to know where to store and load the database, changes must be made to the `settings.py`
+In order for the app to know where to store and load the database and the .env, changes must be made to the `settings.py`
 ```bash
+import environ
+
+env = environ.Env(
+    DEBUG=(bool, False)
+)
+
+environ.Env.read_env()
+
+SECRET_KEY = env('DJANGO_SECRET_KEY')
+DEBUG = env('DEBUG')
+ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['localhost'])
+
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DATABASES = {
@@ -84,8 +97,7 @@ Because unnecessary files in the container would consume resources they should b
 
 For a simular purpose create the `.gitignore`. This contains everything to ignore uploading into the Git repository. Basicly files which are automatically generated, local (database, settings), secret or doesn't belong in the repository.
 
-In `èxamples.env` are the placeholders for the envoirement variables. 
-
+In `èxamples.env` are the placeholders for the envoirement variables. These have to be replaced with yours and renamed in `.env` before image build.
 
 
 Build the image by typing 
