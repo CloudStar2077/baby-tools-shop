@@ -4,10 +4,10 @@ Setup a docker container to run a Django Web App, this will be implementet by ge
 
 # Table of Contents
 
-1. [Quickstart](#Quickstart) 
-2. [Usage](#Usage)
+1. [Quickstart](#1.Quickstart) 
+2. [Usage](#2.Usage)
 
-## Quickstart
+## 1.Quickstart
 
 PREREQUISITES
 
@@ -38,7 +38,7 @@ docker run -d \
   bts-app:latest
 ```
 
-## 2. Usage
+## 2.Usage
 
 To Start building the Repository, clone the Python App from Github, this is the core of the project.
 
