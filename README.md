@@ -7,7 +7,7 @@ Setup a docker container to run a Django Web App, this will be implementet by ge
 1. [Quickstart](#Quickstart) 
 2. [Usage](#Usage)
 
-## 1. Quickstart
+## Quickstart
 
 PREREQUISITES
 
