@@ -20,20 +20,26 @@ QUICK START GUIDE
 ```bash
 git clone git@github.com:CloudStar2077/baby-tools-shop.git
 cd /baby-tools-shop
+mv example.env .env  # rename the example.env to .env
 ```
+Replace the Values in the `.env` with yours, you can generate the secret key by 
+```bash
+python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+  ```
 - Build docker image
 ```bash
 docker build -t bts-app -f Dockerfile .
 ```  
 - Run the Container
 ```bash
-docker run -d \     
-  -p 8025:8025 \
-  -v /home/docker_volume_maps/data:/app/babyshop_app/data \
-  -v /home/docker_volume_maps/media:/app/babyshop_app/media \
-  --name bts-app \
-  --restart unless-stopped \
-  bts-app:latest
+docker run --env-file .env \                                 
+-d \                                                         
+-p 8025:8025 \                                               
+-v /home/docker_volume_maps/data:/app/babyshop_app/data \    
+-v /home/docker_volume_maps/media:/app/babyshop_app/media \
+--name bts-app \                                             
+--restart unless-stopped \                                   
+bts-app:latest 
 ```
 
 ## Usage
@@ -84,13 +90,15 @@ This should finish without any errors ...
 
 Then start the Container
 ```bash
-docker run -d \                                                                 # "-d" for detatch mode to run container in background
-  -p 8025:8025 \                                                                # "-p" for port mapping <HostPort>:<ContainerPort>
-  -v /home/docker_volume_maps/data:/app/babyshop_app/data \                     # "-v" for volume mapping <HostPath>:<ContainerPath>
-  -v /home/docker_volume_maps/media:/app/babyshop_app/media \                   # "--name" for naming the container
-  --name bts-app \
-  --restart unless-stopped \                                                    # "--restart unless-stopped" for restarting the container after
-  bts-app:latest                                                                # an error or crash
+docker run --env-file .env \                                 # "--env-file" to pass the .env file when starting the container
+-d \                                                         # "-d" for detatch mode to run container in background
+-p 8025:8025 \                                               # "-p" for port mapping <HostPort>:<ContainerPort>
+-v /home/docker_volume_maps/data:/app/babyshop_app/data \    # "-v" for volume mapping <HostPath>:<ContainerPath>
+-v /home/docker_volume_maps/media:/app/babyshop_app/media \
+--name bts-app \                                             # "--name" for naming the container
+--restart unless-stopped \                                   # "--restart unless-stopped" for restarting the container after an error or crash
+bts-app:latest 
+                                       
    ```
  
 Visit the baby-tools-shop in a web-browser
