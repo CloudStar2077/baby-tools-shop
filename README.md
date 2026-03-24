@@ -7,14 +7,12 @@ Setup a docker container to run a Django Web App, this will be implementet by ge
 1. [Quickstart](#Quickstart) 
 2. [Usage](#Usage)
 
-## Quickstart
+## PREREQUISITES
 
-PREREQUISITES
-
-- Basic knowledge of the terminal/CLI
 - Docker (version 20.10 or higher) installed
 - Git installed
-- VENV
+
+## Quickstart
 
 QUICK START GUIDE
 
