@@ -41,6 +41,10 @@ docker run --env-file .env \
 --restart unless-stopped \                                   
 bts-app:latest 
 ```
+Open a web browser then enter the target destination to check accessibility
+```bash
+<HostIP>:8025
+  ```
 
 ## Usage
 
