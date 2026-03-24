@@ -97,7 +97,7 @@ Because unnecessary files in the container would consume resources they should b
 
 For a simular purpose create the `.gitignore`. This contains everything to ignore uploading into the Git repository. Basicly files which are automatically generated, local (database, settings), secret or doesn't belong in the repository.
 
-In `èxamples.env` are the placeholders for the envoirement variables. These have to be replaced with yours and renamed in `.env` before image build.
+In the `èxamples.env` are the placeholders for the envoirement variables, replace it with yours and rename the file in `.env` before building the image.
 
 
 Build the image by typing 
