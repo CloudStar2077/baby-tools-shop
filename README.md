@@ -4,8 +4,9 @@ Setup a docker container to run a Django Web App, this will be implementet by ge
 
 # Table of Contents
 
-1. [Quickstart](#Quickstart) 
-2. [Usage](#Usage)
+1. [Prerequisites](#Prerequisites) 
+2. [Quickstart](#Quickstart) 
+3. [Usage](#Usage)
 
 ## PREREQUISITES
 
