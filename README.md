@@ -97,7 +97,6 @@ In the `èxamples.env` are the placeholders for the envoirement variables, repla
 
 Build the image by typing 
 ```bash
-cd /baby-tools-shop
 docker build -t bts-app -f Dockerfile .  # "-t" for tag the image with a name
                                          # "-f" input file
  ```
