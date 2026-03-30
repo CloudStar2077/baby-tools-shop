@@ -49,24 +49,20 @@ Open a web browser then enter the target destination to check accessibility
 
 ## Usage
 
-To Start building the Repository, clone the Python App from Github, this is the core of the project.
+Clone the Repository from Github.
 
-```git clone git@github.com:Developer-Akademie-DevSecOpsKurs/baby-tools-shop.git```
-Start the app by 
-```bash
-cd baby-tools-shop/babyshop_app
-python manage.py runserver
-```
-You can see that some dependencies (packages) need to be installed and the SQL database needs to be migrated. Install the packages and then run the migrations. To make the environment reproducible, the dependencies are listed in the `requirements.txt`.
-```bash
-pip install django && pip install pillow
-
-python manage.py migrate  #migration of the database
-
-pip freeze -> requirements.txt #prints the output of all dependencies into the requirements.txt
+```bash 
+git clone git@github.com:CloudStar2077/baby-tools-shop.git
+  ```
+```bash 
+cd baby-tools-shop
   ```
 
-In order for the app to know where to store and load the database and the variables, changes must be made to the `settings.py`
+
+The `Dockerfile` describes the predefined docker image like a building plan for the container to start it within seconds without
+doing any configurations. This begins with the first line in the Dockerfile which pulls the base image for the Container, a lighweight linux operating system including python3. Then set the working directory to copy it into the container. After the container is up running it will execute some commands for installing the requirements, open port 8025 and start a shell in the working directory to run the app.
+
+In order for the app to know where to store and load the database and the variables, changes had been made to the `settings.py`
 ```bash
 import environ
 
@@ -91,8 +87,6 @@ DATABASES = {
 }
    ```
 
-The `Dockerfile` describes the predefined docker image like a building plan for the container to start it within seconds without
-doing any configurations. This begins with the first line in the Dockerfile which pulls the base image for the Container, a lighweight linux operating system including python3. Then set the working directory to copy it into the container. After the container is up running it will execute some commands for installing the requirements, open port 8025 and start a shell in the working directory to run the app.
 
 Because unnecessary files in the container would consume resources they should be ignored in the container build by setting up the `.dockerignore` file. This includes the Dockerfile, Git, temporary files, logs, environment variables etc.
 
