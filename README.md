@@ -15,8 +15,6 @@ Setup a docker container to run a Django Web App, this will be implementet by ge
 
 ## Quickstart
 
-QUICK START GUIDE
-
 - Clone Repository
 ```bash
 git clone git@github.com:CloudStar2077/baby-tools-shop.git
